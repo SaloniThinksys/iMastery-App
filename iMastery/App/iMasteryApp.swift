@@ -42,7 +42,7 @@
 //    }
 //}
 
-// FOR MAP APP -----------------------------------------------------------------------
+// FOR TRAVEL JOURNAL APP -----------------------------------------------------------------------
 
 import SwiftUI
 
@@ -50,7 +50,7 @@ import SwiftUI
 struct iMasteryAp: App{
     var body: some Scene{
         WindowGroup{
-            MainNotesView()
+            TripListView()
         }
     }
 }
