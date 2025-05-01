@@ -5,6 +5,27 @@
 //  Created by Saloni Singh on 18/04/25.
 //
 
+import SwiftUI
+import UserNotifications
+
+@main
+struct iMastery: App {
+    let persistenceController = PersistenceController.shared
+    
+    init(){
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge]){ granted, error in
+            print("Notification granted: \(granted)")
+        }
+    }
+    
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+        }
+    }
+}
+
 // FOR MYHABIT APP ----------------------------------------------------------------
 
 //import SwiftUI
@@ -42,15 +63,31 @@
 //    }
 //}
 
-// FOR TRAVEL JOURNAL APP -----------------------------------------------------------------------
+// FOR TRAVEL JOURNAL APP ---------------------------------------------------------
+//
+//import SwiftUI
+//
+//@main
+//struct iMasteryAp: App{
+//    var body: some Scene{
+//        WindowGroup{
+//            TripListView()
+//        }
+//    }
+//}
 
-import SwiftUI
 
-@main
-struct iMasteryAp: App{
-    var body: some Scene{
-        WindowGroup{
-            TripListView()
-        }
-    }
-}
+// FOR PODCAST PLAYER APP
+
+//import SwiftUI
+//
+//@main
+//struct iMastery: App {
+//    var body: some Scene {
+//        WindowGroup {
+//            MainView()
+//        }
+//    }
+//}
+
+

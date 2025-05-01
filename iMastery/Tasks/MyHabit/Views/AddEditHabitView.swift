@@ -83,7 +83,3 @@ struct AddEditHabitView: View {
     }
 }
 
-
-#Preview {
-    AddEditHabitView()
-}
