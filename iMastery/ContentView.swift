@@ -10,6 +10,15 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
             TabView {
+                iMasteryMainView()
+                    .tabItem {
+                        Label("Home", systemImage: "house.fill")
+                    }
+                    
+                LoginView()
+                    .tabItem {
+                        Label("Login/SignUp", systemImage: "person.badge.shield.exclamationmark.fill")
+                    }
                 HabitListView()
                     .tabItem {
                         Label("My Habit", systemImage: "chart.bar.fill")

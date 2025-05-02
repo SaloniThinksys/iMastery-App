@@ -11,6 +11,7 @@ import UserNotifications
 @main
 struct iMastery: App {
     let persistenceController = PersistenceController.shared
+    @StateObject var userManager = UserManager()
     
     init(){
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge]){ granted, error in
@@ -22,6 +23,7 @@ struct iMastery: App {
         WindowGroup {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(userManager)
         }
     }
 }

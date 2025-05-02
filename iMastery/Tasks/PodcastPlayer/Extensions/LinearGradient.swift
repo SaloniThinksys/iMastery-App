@@ -16,3 +16,13 @@ extension LinearGradient {
     )
 }
 
+extension LinearGradient {
+    static let blueGradient = LinearGradient(
+        gradient: Gradient(colors: [Color.blue.opacity(0.7), Color.indigo]),
+        startPoint: .topLeading,
+        endPoint: .bottomTrailing
+    )
+}
+
+
+
