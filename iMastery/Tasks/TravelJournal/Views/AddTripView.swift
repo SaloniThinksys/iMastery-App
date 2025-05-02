@@ -107,9 +107,9 @@ struct AddTripView: View {
                         .frame(maxWidth: .infinity)
                         .font(.title3.bold())
                         .foregroundColor(.white)
-                        .background(.blue.opacity(0.5))
+                        .background(LinearGradient.blueGradient)
                         .cornerRadius(10)
-                        .padding(.bottom, 5)
+                        .padding(.bottom, 10)
                     }
                     .padding()
                     .background(.white)

@@ -8,33 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var tabSelection = 1
+    @Namespace private var animation
+    
     var body: some View {
-            TabView {
+            TabView(selection: $tabSelection) {
                 iMasteryMainView()
-                    .tabItem {
-                        Label("Home", systemImage: "house.fill")
-                    }
-                    
+                    .tag(1)
+                
                 LoginView()
-                    .tabItem {
-                        Label("Login/SignUp", systemImage: "person.badge.shield.exclamationmark.fill")
-                    }
+                    .tag(2)
+                
                 HabitListView()
-                    .tabItem {
-                        Label("My Habit", systemImage: "chart.bar.fill")
-                    }
+                    .tag(3)
                 
                 MainView()
-                    .tabItem {
-                        Label("Podcast Player", systemImage: "microphone")
-                    }
+                    .tag(4)
                 
                 TripListView()
-                    .tabItem {
-                        Label("Travel Journal", systemImage: "airplane.departure")
-                        
-                    }
+                    .tag(5)
             }
+            .overlay(alignment: .bottom){
+                CustomTabBar(tabSelection: $tabSelection, animation: animation)
+            }
+            .ignoresSafeArea()
     }
 }
 

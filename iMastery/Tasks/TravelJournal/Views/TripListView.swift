@@ -71,9 +71,9 @@ struct TripListView: View {
                 .frame(maxWidth: .infinity)
                 .font(.title3.bold())
                 .foregroundColor(.white)
-                .background(.blue.opacity(0.5))
+                .background(LinearGradient.blueGradient)
                 .cornerRadius(10)
-                .padding(.bottom, 5)
+                .padding(.bottom, 10)
             }
             .padding()
             .navigationTitle("Travel Journal")
@@ -84,7 +84,7 @@ struct TripListView: View {
                     } , label: {
                         Image(systemName: "mappin.and.ellipse.circle")
                             .font(.title2.bold())
-                            .foregroundColor(.blue.opacity(0.5))
+                            .foregroundStyle(LinearGradient.blueGradient)
                     })
                 }
             }

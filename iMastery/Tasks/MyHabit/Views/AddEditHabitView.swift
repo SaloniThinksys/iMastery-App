@@ -65,7 +65,7 @@ struct AddEditHabitView: View {
                 .padding()
                 .bold()
                 .frame(maxWidth: .infinity)
-                .background(Color.blue.cornerRadius(10))
+                .background(LinearGradient.blueGradient.cornerRadius(10))
                 .foregroundColor(.white)
             }
             .padding()

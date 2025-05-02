@@ -96,6 +96,7 @@ struct HabitListView: View {
                         showStats.toggle()
                     } label: {
                         Image(systemName: "chart.bar.fill")
+                            .foregroundStyle(LinearGradient.blueGradient)
                     }
                 }
             }
@@ -108,7 +109,7 @@ struct HabitListView: View {
                 } label: {
                     Image(systemName: "plus.circle.fill")
                         .font(.system(size: 60))
-                        .foregroundColor(.blue)
+                        .foregroundStyle(LinearGradient.blueGradient)
                         .padding()
                 }
             }
